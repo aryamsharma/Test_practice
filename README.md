@@ -1,10 +1,11 @@
 # Questions for students because they aren't ready
-## FAQ
-1. For some reason <= is formatted like `<=`. Don't ask.
+## How to do this
 
-2. Any questions that begin with an asterisk (\*), you are supposed to program the solution. There will be no answer written down for it. ***I will write out the files in the same format your test will be given to you in.***
+1. The way you do this test is by starting from the [questions](#questions) (obviously). For each question it'll tell you if you should be programming the solution for it (**denoted by a \* at the starting of the question**). After you are done doing the questions go to [answers](#answers) and check your work.
 
-3. For the questions I'm writing whenever I'm asking for an input I'll normally tell you what type of input you want but on the test they are normally vague about it do if they say numbers ***assume integers UNLESS the question talks about floats.***
+2. If you need to be programming a solution go to the file named [functions.py](functions.py) and program your solution in the correct function. For example when you program ***unit 2 question 5***, program it under the function named ***u2q5***.
+
+3. If a question does not start with a \*, then you don't need to program the solution. As long as whatever you think matches up with the answers you are fine.
 ___
 ## **Questions**
 
@@ -114,13 +115,54 @@ def foo(x, y=23, z=12):
 
 print(foo(x=5, z=10, y=2))
 ```
-8. *Given a list of numbers use print out every letter in a sentence.
+
+8. What is recursion? Give an example. The code doesn't need to anything just show how it would actually work.
+
+9. *Given a list of numbers use print out every letter in a sentence.
 ```
 function([1, 2, 3]) -> 6
 function([1, 2, 3, 4, 5]) -> 15
 ```
-9. Figure out
+10. *Figure out whether a string is a palindrome.
+```
+function("taco cat") -> True
+function("Racecar") -> True
+function("randomstring") -> False
+```
+11. Name 3 types of data structures.
 ___
+### **Unit 5**
+1. What is a list?
+
+2. How are lists stored in RAM?
+
+3. How would I get the last value in a list?
+
+4. What is a tuple and how is it different from a list?
+
+5. How would I reverse a list?
+
+6. What are the 2 different type of possible cloning for a list? What's the difference between them? (Bonus give an example)
+
+7. *Program a list comprehension that will list all values between -n and n (inclusive).
+```
+functions(2) -> [-2, -1, 0, 1, 2]
+```
+8. What will this list contain?
+```
+[i ** 2 for i in range(0, 10) if i % 2]
+```
+9. *Given a list of words, using a list comprehension, return a list containing all of the given list words if the word does contain an e.
+```
+function(["The", "quick", "brownie", "fox"]) -> ["quick", "fox"]
+function(["The", "Earth", "likes", "treEs", "E"]) -> []
+```
+10. *Given a list of words, using a list comprehension, return a list containing all of the length of all the length of the words in order.
+```
+function(["The", "quick", "brownie", "fox"]) -> [3, 3, 5, 7]
+function(["OH", "NO", "THE", "TABLE"]) -> [2, 2, 3, 5]
+```
+
 ## **Answers**
 
 ### **Unit 2**
@@ -180,3 +222,47 @@ def foo(x, y=1):
 6. No, the function will not work as the optional argument is before the mandatory argument.
 
 7. Yes, the function will work and it will output the value 7.
+
+8. Recursion is when a function call's itself.
+```
+def foo():
+    return foo()
+```
+11. List, sets, tuples. Others might include hashmaps, dictionaries, trees, trie tree
+___
+### **Unit 5**
+1. A list is a data structure that can hold multiple values.
+
+2. Lists' data is stored side by side in RAM
+
+3. 
+```
+list_name[-1]
+```
+4. A tuple is a type of a list but once it is created cannot be modified.
+
+5. 
+```
+list_name[::-1]
+```
+
+6. Shallow and deep clone. A shallow clone will retain the memory address, which means if you were to edit the newly shallow cloned list the original list would change as well. A deep clone will create new memory addresses and if you were to edit the new list nothing would happen the the original.
+```
+og_list = [1, 2]
+shallow_list = og_list
+shallow_list[0] = 3
+
+print(og_list)      -> [3, 2]
+print(shallow_list) -> [3, 2]
+
+og_list = [1, 2]
+deep_list = og_list[:]
+deep_list[0] = 3
+
+print(og_list)   -> [1, 2]
+print(deep_list) -> [3, 2]
+```
+8. 
+```
+[0, 4, 16, 36, 64]
+```
