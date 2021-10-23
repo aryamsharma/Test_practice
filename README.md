@@ -3,7 +3,7 @@
 
 1. The way you do this test is by starting from the [questions](#questions) (obviously). For each question it'll tell you if you should be programming the solution for it (**denoted by a \* at the starting of the question**). After you are done doing the questions go to [answers](#answers) and check your work.
 
-2. If you need to be programming a solution go to the file named [functions.py](functions.py) and program your solution in the correct function. For example when you program ***unit 2 question 5***, program it under the function named ***u2q5***.
+2. If you need to be programming a solution go to the file named [functions.py](functions.py) and program your solution in the correct function. For example when you program ***unit 2 question 5***, program it under the function named ***u2q5***. Once you are done programming your solution, add the question number (u2q5) to the list at line 78 in [functions_test.py](functions_test.py). The list *functions_to_test* will store the function names it will be testing. Remember to edit it so that it runs your function.
 
 3. If a question does not start with a \*, then you don't need to program the solution. As long as whatever you think matches up with the answers you are fine.
 ___
@@ -13,7 +13,7 @@ ___
 
 1. What are the primitive data types in Python?
 
-2. How do I assign x the value cake?
+2. How do I assign x the value "Cake"?
 
 3. What data type is x below?
 ```
@@ -36,7 +36,7 @@ if x == 10:
 else:
     print(4)
 ```
-5. *Write a program to take an input from the user and return the cube value of it. (You cannot use the math library)
+5. *Write a program to take an input from the user and return the cube value of it.
 ```
 function(2) -> 8
 function(-3) -> -27
@@ -57,16 +57,16 @@ ___
 ### **Unit 3**
 1. *Return the sum of all the numbers which are divisible by 15 from [1, n].
 ```
-function(15) = 15
-function(30) = 45
+function(15) -> 15
+function(30) -> 45
 ```
 2. Why would someone use a for loop instead of a while loop?
 
 3. *Given the input n, figure out the sum of the values 1/1 + 1/2 ... + 1/n.
 ```
-function(1) = 1
-function(2) = 1.5
-function(3) = 1.8(3)
+function(1) -> 1
+function(2) -> 1.5
+function(3) -> 1.8(3)
 ```
 4. Print out a triangle shaped like this using a for loop
 ```
@@ -118,7 +118,7 @@ print(foo(x=5, z=10, y=2))
 
 8. What is recursion? Give an example. The code doesn't need to anything just show how it would actually work.
 
-9. *Given a list of numbers use print out every letter in a sentence.
+9. *Given a list of numbers use recursion to get the sum of the values.
 ```
 function([1, 2, 3]) -> 6
 function([1, 2, 3, 4, 5]) -> 15
